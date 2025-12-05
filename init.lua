@@ -1,0 +1,12 @@
+require("config") -- before lazy to set local leader
+require("lazy-nvim")
+require("mappings")
+require("colors")
+require("autocommands")
+require("props")
+require("lualine").setup({})
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("marksman")
+vim.lsp.enable("zls")
+vim.lsp.enable("shellcheck")
+vim.lsp.enable("yamlls")

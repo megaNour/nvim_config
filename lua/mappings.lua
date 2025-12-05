@@ -1,0 +1,38 @@
+vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<CR")
+
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
+
+vim.keymap.set("n", "<C-w><C-h>", "<C-w>H", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-w><C-l>", "<C-w>L", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-w><C-j>", "<C-w>J", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-w><C-k>", "<C-w>K", { desc = "Move focus to the upper window" })
+
+-- command mode mappings to jump
+vim.keymap.set("c", "<M-Left>", "<S-Left>")
+vim.keymap.set("c", "<M-b>", "<S-Left>") -- ghostty
+vim.keymap.set("c", "<M-Down>", "<End>")
+vim.keymap.set("c", "<M-Up>", "<Home>")
+vim.keymap.set("c", "<M-Right>", "<S-Right>")
+vim.keymap.set("c", "<M-f>", "<S-Right>") -- ghostty
+
+-- previous next in location list
+vim.keymap.set({ "n", "x" }, "<F8>", ":lpre<CR>zz")
+vim.keymap.set({ "n", "x" }, "<F7>", ":lne<CR>zz")
+
+-- scroll and search always centered
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
+
+-- folding
+vim.keymap.set("n", "<leader>z", function()
+  -- Autofolding treesitter
+  vim.opt.foldmethod = "expr"
+  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+  vim.opt.foldenable = true --not vim.opt.foldenable
+  vim.opt.foldlevel = 20
+end)
