@@ -18,6 +18,12 @@ vim.keymap.set("c", "<M-Up>", "<Home>")
 vim.keymap.set("c", "<M-Right>", "<S-Right>")
 vim.keymap.set("c", "<M-f>", "<S-Right>") -- ghostty
 
+vim.keymap.set({ "n", "x" }, "gy", ':let @+=@"<CR>', { desc = "Transfer anonymous register to outer clipboard" })
+vim.keymap.set({ "n", "x" }, "<leader>y", '"+y', { desc = "Copy also to outer clipboard" })
+vim.keymap.set({ "n", "x" }, "<leader>d", '"_d', { desc = "Delete & discard" })
+vim.keymap.set({ "n", "x" }, "<leader>c", '"_c', { desc = "Change & discard" })
+vim.keymap.set({ "n", "x" }, "<leader>x", '"_x', { desc = "Delete & discard" })
+
 -- previous next in location list
 vim.keymap.set({ "n", "x" }, "<F8>", ":lpre<CR>zz")
 vim.keymap.set({ "n", "x" }, "<F7>", ":lne<CR>zz")
