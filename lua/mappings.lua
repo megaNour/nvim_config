@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<CR")
+vim.keymap.set("n", "<esc>", ":nohlsearch<CR>")
 vim.keymap.set("n", "s", "")
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
