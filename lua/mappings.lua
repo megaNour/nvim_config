@@ -14,8 +14,8 @@ vim.keymap.set("n", "<C-w><C-k>", "<C-w>K", { desc = "Move focus to the upper wi
 -- command mode mappings to jump
 vim.keymap.set("c", "<M-Left>", "<S-Left>")
 vim.keymap.set("c", "<M-b>", "<S-Left>") -- ghostty
-vim.keymap.set("c", "<M-Down>", "<End>")
-vim.keymap.set("c", "<M-Up>", "<Home>")
+vim.keymap.set("c", "<M-Down>", "<Home>")
+vim.keymap.set("c", "<M-Up>", "<End>")
 vim.keymap.set("c", "<M-Right>", "<S-Right>")
 vim.keymap.set("c", "<M-f>", "<S-Right>") -- ghostty
 
