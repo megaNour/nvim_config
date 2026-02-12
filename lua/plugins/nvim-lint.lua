@@ -6,6 +6,7 @@ return {
       local lint = require("lint")
       local props = require("props"):readModule()
       lint.linters.markdownlint.cmd = (props and props.markdownlint) or lint.linters.markdownlint.cmd
+      table.insert(lint.linters.shellcheck.args, 1, "-x")
       lint.linters_by_ft = {
         markdown = { "markdownlint" },
         sh = { "shellcheck" },
