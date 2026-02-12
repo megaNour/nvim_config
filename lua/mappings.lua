@@ -6,10 +6,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window"
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
-vim.keymap.set("n", "<C-w><C-h>", "<C-w>H", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-w><C-l>", "<C-w>L", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-w><C-j>", "<C-w>J", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-w><C-k>", "<C-w>K", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<C-w><C-h>", "<C-w>H", { desc = "Move focussed window left" })
+vim.keymap.set("n", "<C-w><C-l>", "<C-w>L", { desc = "Move focussed window right" })
+vim.keymap.set("n", "<C-w><C-j>", "<C-w>J", { desc = "Move focussed window down" })
+vim.keymap.set("n", "<C-w><C-k>", "<C-w>K", { desc = "Move focussed window right" })
 
 -- command mode mappings to jump
 vim.keymap.set("c", "<M-Left>", "<S-Left>")
