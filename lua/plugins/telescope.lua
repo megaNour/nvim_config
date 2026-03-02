@@ -58,6 +58,10 @@ return {
       })
     end, { desc = "[S]earch [/] in Open Files" })
 
+    vim.keymap.set("n", "<leader>sx", function()
+      builtin.find_files({ cwd = vim.fn.expand("~/git/shutils") })
+    end, { desc = "[S]earch shutils" })
+
     vim.keymap.set("n", "<leader>sz", function()
       builtin.find_files({ cwd = "/opt/homebrew/Cellar/zig/0.15.2/lib/zig" })
     end, { desc = "[S]earch [Z]ig files" })
