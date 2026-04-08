@@ -35,6 +35,14 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 
+vim.keymap.set("n", "grd", function()
+  vim.lsp.buf.definition()
+  -- Schedule the centering to ensure it happens after the jump
+  vim.defer_fn(function()
+    vim.cmd("normal! zz")
+  end, 35)
+end)
+
 -- folding
 vim.keymap.set("n", "<leader>z", function()
   -- Autofolding treesitter
