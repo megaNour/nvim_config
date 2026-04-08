@@ -41,13 +41,13 @@ vim.keymap.set("n", "grd", function()
   vim.defer_fn(function()
     vim.cmd("normal! zz")
   end, 35)
-end)
+end, { desc = "Go to Definition" })
 
 -- folding
 vim.keymap.set("n", "<leader>z", function()
   -- Autofolding treesitter
   vim.opt.foldmethod = "expr"
-  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+  vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
   vim.opt.foldenable = true --not vim.opt.foldenable
   vim.opt.foldlevel = 20
 end)
