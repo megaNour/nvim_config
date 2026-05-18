@@ -16,6 +16,9 @@ return { -- Autoformat
       }
     end,
     formatters_by_ft = {
+      c = { "clang-format" },
+      cpp = { "clang-format" },
+      objc = { "clang-format" },
       css = { "prettier" },
       json = { "jq" },
       lua = { "stylua" },
