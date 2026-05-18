@@ -19,6 +19,7 @@ return {
       "gomod",
       "gowork",
       "gitcommit",
+      "helm",
       "html",
       "lua",
       "luadoc",
