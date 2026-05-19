@@ -25,6 +25,7 @@ return { -- Autoformat
       markdown = { "mdformat" },
       python = { "ruff_format" },
       sh = { "shfmt" },
+      terraform = { "terraform_fmt" },
       toml = { "taplo" },
       xml = { "xmlformat" },
       yaml = { "prettier" },
