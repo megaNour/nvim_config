@@ -58,6 +58,22 @@ return {
       })
     end, { desc = "[S]earch [/] in Open Files" })
 
+    vim.keymap.set("n", "<leader>si", function()
+      vim.ui.input({ prompt = "search in directory: ", completion = "dir" }, function(input)
+        if input == nil then
+          return
+        end
+        local dir = input ~= "" and input or "."
+        dir = vim.fn.expand(dir)
+        print(dir)
+        builtin.find_files({ cwd = dir })
+      end)
+    end, { desc = "[S]earch [I]n" })
+
+    vim.keymap.set("n", "<leader>sa", function()
+      builtin.find_files({ no_ignore = true, hidden = true })
+    end, { desc = "[S]earch [A]ll" })
+
     vim.keymap.set("n", "<leader>sx", function()
       builtin.find_files({ cwd = vim.fn.expand("~/git/shutils") })
     end, { desc = "[S]earch shutils" })
