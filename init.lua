@@ -6,6 +6,8 @@ require("autocommands")
 require("props")
 require("lualine").setup({})
 require("oil").setup({})
+require("nvim-tree").setup({})
+
 vim.lsp.enable("awk_ls")
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("gopls")
