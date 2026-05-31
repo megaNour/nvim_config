@@ -1,4 +1,8 @@
-vim.keymap.set("n", "<leader>o", function()
-  vim.cmd("Oil")
-end, { desc = "Oil" })
-return { "stevearc/oil.nvim" }
+return {
+    "stevearc/oil.nvim",
+    config = function()
+        vim.keymap.set("n", "<leader>to", function()
+            vim.cmd("Oil")
+        end, { desc = "[O]il" })
+    end,
+}
