@@ -55,3 +55,6 @@ vim.keymap.set("n", "<leader>z", function()
     vim.opt.foldenable = true --not vim.opt.foldenable
     vim.opt.foldlevel = 20
 end)
+
+vim.keymap.set({ "n", "x" }, "<leader>hp", ":Gitsigns preview_hunk<CR>", { desc = "Git Preview Hunk" })
+vim.keymap.set({ "n", "x" }, "<leader>hr", ":Gitsigns reset_hunk<CR>", { desc = "Git Reset Hunk" })
