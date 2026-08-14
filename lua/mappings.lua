@@ -27,6 +27,7 @@ vim.keymap.set({ "n", "x" }, "<leader>y", '"+y', { desc = "Copy also to outer cl
 vim.keymap.set({ "n", "x" }, "<leader>d", '"_d', { desc = "Delete & discard" })
 vim.keymap.set({ "n", "x" }, "<leader>c", '"_c', { desc = "Change & discard" })
 vim.keymap.set({ "n", "x" }, "<leader>x", '"_x', { desc = "Delete & discard" })
+vim.keymap.set({ "n", "x" }, "<leader>p", '"_p', { desc = "Paste & discard" })
 
 -- previous next in location list
 vim.keymap.set({ "n", "x" }, "<F8>", ":lpre<CR>zz")
