@@ -20,3 +20,10 @@ vim.lsp.enable("zls")
 vim.lsp.enable("clangd")
 vim.lsp.enable("helm_ls")
 vim.lsp.enable("sourcekit")
+
+vim.filetype.add({
+    extension = {
+        metal = "metal",
+        tpl = "gotpl",
+    },
+})
