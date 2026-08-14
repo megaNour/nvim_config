@@ -10,6 +10,7 @@ require("nvim-tree").setup({})
 
 vim.lsp.enable("awk_ls")
 vim.lsp.enable("basedpyright")
+vim.lsp.enable("clangd")
 vim.lsp.enable("gopls")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("marksman")
@@ -17,9 +18,7 @@ vim.lsp.enable("terraformls")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("yamlls")
 vim.lsp.enable("zls")
-vim.lsp.enable("clangd")
 vim.lsp.enable("helm_ls")
-vim.lsp.enable("sourcekit")
 
 vim.filetype.add({
     extension = {
