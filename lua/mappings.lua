@@ -1,7 +1,7 @@
 vim.keymap.set("n", "<esc>", ":nohlsearch<CR>")
 vim.keymap.set("n", "s", "")
 vim.keymap.set("n", "<leader>f", function()
-  require("conform").format()
+    require("conform").format()
 end, { desc = "Format buffer with conform" })
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
@@ -39,18 +39,18 @@ vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 
 vim.keymap.set("n", "grd", function()
-  vim.lsp.buf.definition()
-  -- Schedule the centering to ensure it happens after the jump
-  vim.defer_fn(function()
-    vim.cmd("normal! zz")
-  end, 35)
+    vim.lsp.buf.definition()
+    -- Schedule the centering to ensure it happens after the jump
+    vim.defer_fn(function()
+        vim.cmd("normal! zz")
+    end, 35)
 end, { desc = "Go to Definition" })
 
 -- folding
 vim.keymap.set("n", "<leader>z", function()
-  -- Autofolding treesitter
-  vim.opt.foldmethod = "expr"
-  vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-  vim.opt.foldenable = true --not vim.opt.foldenable
-  vim.opt.foldlevel = 20
+    -- Autofolding treesitter
+    vim.opt.foldmethod = "expr"
+    vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.opt.foldenable = true --not vim.opt.foldenable
+    vim.opt.foldlevel = 20
 end)
